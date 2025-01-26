@@ -10,8 +10,8 @@ function App() {
 
   return (
     <>
-      {/* <NetworkWidget /> */}
       <ExampleWidget />
+      <NetworkWidget />
 
       <DevTools />
     </>

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useSettings } from "@/hooks";
+import { useLively } from "@/hooks";
 import { CSSProperties } from "react";
 
 export interface MoveableWidgetProps {
@@ -8,7 +8,7 @@ export interface MoveableWidgetProps {
 }
 
 function useWidgetSettings(id: string) {
-  const settings = useSettings() as Record<string, any>;
+  const { properties } = useLively();
 
   function tryParseInt(value: any, defaultValue: number) {
     const parsed = parseInt(value, 10);
@@ -16,10 +16,10 @@ function useWidgetSettings(id: string) {
   }
 
   return {
-    enabled: settings[`${id}-enabled`] || false,
+    enabled: properties[`${id}-enabled`] || false,
     position: {
-      x: tryParseInt(settings[`${id}-x`], 0),
-      y: tryParseInt(settings[`${id}-y`], 0),
+      x: tryParseInt(properties[`${id}-x`], 0),
+      y: tryParseInt(properties[`${id}-y`], 0),
     },
   };
 }

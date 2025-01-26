@@ -1,33 +1,54 @@
 {
     "label1": {
         "type": "label",
-        "value": "Network widget"
-    },
-    "label2": {
-        "type": "label",
-        "value": "Wallpaper Day (06:00 - 19:00)"
+        "value": "Wallpaper"
     },
     "backgroundImageDaySelect": {
         "type": "folderDropdown",
         "value": "wallhaven-exk2zr.png",
-        "text": "Background (day)",
+        "text": "Day wallpaper (06:00 - 19:00)",
         "filter": "*.jpg|*.jpeg|*.png",
         "folder": "wallpapers"
-    },
-    "label3": {
-        "type": "label",
-        "value": "Wallpaper Night (19:00 - 06:00)"
     },
     "backgroundImageNightSelect": {
         "type": "folderDropdown",
         "value": "wallhaven-x6q953.png",
-        "text": "Background (night)",
+        "text": "Night wallpaper (19:00 - 06:00)",
         "filter": "*.jpg|*.jpeg|*.png",
         "folder": "wallpapers"
     },
-    "labelWidget1": {
+    "network-widget-label": {
         "type": "label",
-        "value": "Example widget"
+        "value": "[Widget] Network"
+    },
+    "network-widget-enabled": {
+        "type": "checkbox",
+        "value": true,
+        "text": "Enabled"
+    },
+    "network-widget-x": {
+        "type": "textbox",
+        "value": "1620",
+        "text": "Position X (px)"
+    },
+    "network-widget-y": {
+        "type": "textbox",
+        "value": "900",
+        "text": "Position Y (px)"
+    },
+    "network-widget-downColor": {
+        "text": "Download color",
+        "type": "color",
+        "value": "#c67941"
+    },
+    "network-widget-upColor": {
+        "text": "Upload color",
+        "type": "color",
+        "value": "#4ac641"
+    },
+    "example-widget-label": {
+        "type": "label",
+        "value": "[Widget] Example"
     },
     "example-widget-enabled": {
         "type": "checkbox",
@@ -44,33 +65,18 @@
         "value": "100",
         "text": "Position Y (px)"
     },
-    "labelWidget2": {
+    "extra-label": {
         "type": "label",
-        "value": "Network widget"
+        "value": "Extra"
     },
-    "network-widget-enabled": {
+    "devtools-enabled": {
         "type": "checkbox",
-        "value": false,
-        "text": "Enabled"
+        "value": true,
+        "text": "Enable devtools"
     },
-    "network-widget-x": {
+    "devtools-autoredirect": {
         "type": "textbox",
-        "value": "100",
-        "text": "Position X (px)"
-    },
-    "network-widget-y": {
-        "type": "textbox",
-        "value": "100",
-        "text": "Position Y (px)"
-    },
-    "network-widget-downColor": {
-        "text": "Download color",
-        "type": "color",
-        "value": "#c67941"
-    },
-    "network-widget-upColor": {
-        "text": "Upload color",
-        "type": "color",
-        "value": "#4ac641"
+        "value": "http://localhost:5173",
+        "text": "Auto-Redirect URL (will redirect only if devtools are enabled and target is url return 200)"
     }
 }

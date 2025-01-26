@@ -1,6 +1,6 @@
 import { useLively } from "@/hooks";
 
-export function useSettings() {
+export function useSettings<T extends string | number | boolean>(key: string, defaultValue: T): T {
     const { properties } = useLively();
-    return properties;
+    return properties[key] as T || defaultValue;
 }

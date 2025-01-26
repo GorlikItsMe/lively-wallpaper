@@ -1,13 +1,13 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
 import { Activity, ArrowUp, ArrowDown } from "lucide-react";
-import { ChartContainer } from "../ui/chart";
 import { Area, AreaChart, CartesianGrid } from "recharts";
-import { ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
-import { CSSProperties } from "react";
-import { useDraggable } from "@dnd-kit/core";
-import { CSS } from "@dnd-kit/utilities";
-import { useNetwork } from "@/hooks";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "@/components/ui/chart";
+import { useNetwork, useSettings } from "@/hooks";
+import MoveableWidget from "../widgets-utils/moveable-widget";
 
 function formatNetSpeed(bytesPerSecond: number) {
   const speedKbps = bytesPerSecond / 1024;
@@ -29,58 +29,18 @@ function NetworkSpeedTitle({ speed }: { speed: number }) {
   );
 }
 
-export default function NetworkWidget({
-  className,
-  id,
-  position,
-  config: _config,
-}: {
-  className?: string;
-  id?: string;
-  position: { x: number; y: number };
-  config?: {
-    downloadColor: string;
-    uploadColor: string;
-  };
-}) {
-  const { attributes, listeners, setNodeRef, transform } = useDraggable({
-    id: id || "network-widget",
-  });
-
-  const style: CSSProperties = transform
-    ? {
-        position: "absolute",
-        top: position.y,
-        left: position.x,
-        transform: CSS.Transform.toString(transform),
-      }
-    : {
-        position: "absolute",
-        top: position.y,
-        left: position.x,
-      };
-
-  const config = _config ?? {
-    downloadColor: "#c67941",
-    uploadColor: "#4ac641",
-  };
-
+export default function NetworkWidget() {
   const { networkChartData, currentDownloadSpeed, currentUploadSpeed } =
     useNetwork();
+  const config = {
+    downloadColor: useSettings("network-widget-downColor", "#c67941"),
+    uploadColor: useSettings("network-widget-upColor", "#4ac641"),
+  };
 
   return (
-    <div
-      ref={setNodeRef}
-      style={style}
-      className="cursor-move touch-none select-none"
-    >
-      <Card
-        className={cn(
-          "w-[300px] bg-black/40 text-white border-white/10",
-          className
-        )}
-      >
-        <CardHeader className="p-3" {...attributes} {...listeners}>
+    <MoveableWidget id="network-widget">
+      <Card className="w-[300px]">
+        <CardHeader className="p-3">
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center justify-between flex-row gap-4 w-full">
               <Activity className="h-5 w-5" />
@@ -193,6 +153,6 @@ export default function NetworkWidget({
           </div>
         </CardContent>
       </Card>
-    </div>
+    </MoveableWidget>
   );
 }

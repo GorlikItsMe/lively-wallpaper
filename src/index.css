@@ -67,6 +67,9 @@
 }
 
 
+html, body {
+  overflow: hidden;
+}
 
 body {
   /* background-image: url('/wallpapers/wallhaven-exk2zr.png'); */

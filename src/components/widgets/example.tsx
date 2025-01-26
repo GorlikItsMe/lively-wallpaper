@@ -5,7 +5,7 @@ import MoveableWidget from "../widgets-utils/moveable-widget";
 export default function ExampleWidget() {
   return (
     <MoveableWidget id="example-widget">
-      <Card className="w-[300px] bg-black/40 text-white border-white/10">
+      <Card className="w-[300px]">
         <CardHeader className="p-3">
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center justify-between flex-row gap-4 w-full">
