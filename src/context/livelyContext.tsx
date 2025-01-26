@@ -1,12 +1,12 @@
 "use client";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-interface LivelyContextProps {
+export interface LivelyContextProps {
   systemInformation: ILivelySystemInformation | null;
   properties: ILivelyProperties;
 }
 
-interface ILivelySystemInformation {
+export interface ILivelySystemInformation {
   NameCpu: string;
   NameGpu: string;
   NameNetCard: string;
@@ -22,10 +22,7 @@ interface ILivelySystemInformation {
   TotalRam: number;
 }
 
-interface ILivelyProperties {
-  backgroundImageDaySelect?: string;
-  backgroundImageNightSelect?: string;
-}
+export type ILivelyProperties = Record<string, string | boolean | number>;
 
 const LivelyContext = createContext<LivelyContextProps>(
   {} as LivelyContextProps
@@ -63,7 +60,10 @@ export const LivelyContextProvider = ({
 
     // @ts-expect-error: Is okay
     window.livelyPropertyListener = (key: string, value: string) => {
-      setProps({ ...properties, [key]: value });
+      setProps((prev) => ({
+        ...prev,
+        [key]: value,
+      }));
     };
   }, []);
 

@@ -30,6 +30,13 @@ export function DevTools() {
     <div className="bg-black/80 rounded-lg text-white p-4 w-[300px] absolute bottom-[50px] left-0">
       <h1>DevTools</h1>
       <Button onClick={() => location.reload()}>Refresh page</Button>
+      <Button
+        onClick={() => {
+          location.href = "http://localhost:5173";
+        }}
+      >
+        Go to localhost:5173
+      </Button>
       <pre className="text-xs">{JSON.stringify(config, null, 2)}</pre>
     </div>
   );

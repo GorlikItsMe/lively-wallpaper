@@ -3,19 +3,9 @@
         "type": "label",
         "value": "Network widget"
     },
-    "netDownloadColor": {
-        "text": "Download color",
-        "type": "color",
-        "value": "#c67941"
-    },
-    "netUploadColor": {
-        "text": "Upload color",
-        "type": "color",
-        "value": "#4ac641"
-    },
     "label2": {
         "type": "label",
-        "value": "Wallpaper Day"
+        "value": "Wallpaper Day (06:00 - 19:00)"
     },
     "backgroundImageDaySelect": {
         "type": "folderDropdown",
@@ -24,18 +14,9 @@
         "filter": "*.jpg|*.jpeg|*.png",
         "folder": "wallpapers"
     },
-    "mediaScalingDayWallpaper": {
-        "type": "dropdown",
-        "value": 1,
-        "text": "Scaling",
-        "items": [
-            "Stretch",
-            "Fill"
-        ]
-    },
     "label3": {
         "type": "label",
-        "value": "Wallpaper Night"
+        "value": "Wallpaper Night (19:00 - 06:00)"
     },
     "backgroundImageNightSelect": {
         "type": "folderDropdown",
@@ -44,13 +25,52 @@
         "filter": "*.jpg|*.jpeg|*.png",
         "folder": "wallpapers"
     },
-    "mediaScalingNightWallpaper": {
-        "type": "dropdown",
-        "value": 1,
-        "text": "Scaling",
-        "items": [
-            "Stretch",
-            "Fill"
-        ]
+    "labelWidget1": {
+        "type": "label",
+        "value": "Example widget"
+    },
+    "example-widget-enabled": {
+        "type": "checkbox",
+        "value": false,
+        "text": "Enabled"
+    },
+    "example-widget-x": {
+        "type": "textbox",
+        "value": "100",
+        "text": "Position X (px)"
+    },
+    "example-widget-y": {
+        "type": "textbox",
+        "value": "100",
+        "text": "Position Y (px)"
+    },
+    "labelWidget2": {
+        "type": "label",
+        "value": "Network widget"
+    },
+    "network-widget-enabled": {
+        "type": "checkbox",
+        "value": false,
+        "text": "Enabled"
+    },
+    "network-widget-x": {
+        "type": "textbox",
+        "value": "100",
+        "text": "Position X (px)"
+    },
+    "network-widget-y": {
+        "type": "textbox",
+        "value": "100",
+        "text": "Position Y (px)"
+    },
+    "network-widget-downColor": {
+        "text": "Download color",
+        "type": "color",
+        "value": "#c67941"
+    },
+    "network-widget-upColor": {
+        "text": "Upload color",
+        "type": "color",
+        "value": "#4ac641"
     }
 }

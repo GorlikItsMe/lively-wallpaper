@@ -1,38 +1,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useLively } from "@/hooks";
 import { cn } from "@/lib/utils";
 import { Activity, ArrowUp, ArrowDown } from "lucide-react";
 import { ChartContainer } from "../ui/chart";
 import { Area, AreaChart, CartesianGrid } from "recharts";
 import { ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
-import { CSSProperties, useEffect, useState } from "react";
+import { CSSProperties } from "react";
 import { useDraggable } from "@dnd-kit/core";
 import { CSS } from "@dnd-kit/utilities";
-
-function useNetwork() {
-  const { systemInformation } = useLively();
-  const [networkChartData, setNetworkChartData] = useState<
-    { timestamp: number; downloadSpeed: number; uploadSpeed: number }[]
-  >([]);
-
-  useEffect(() => {
-    setNetworkChartData((prevHistory) =>
-      prevHistory.slice(-29).concat([
-        {
-          timestamp: Date.now(),
-          downloadSpeed: systemInformation?.CurrentNetDownBytesPerSecond || 0,
-          uploadSpeed: systemInformation?.CurrentNetUpBytesPerSecond || 0,
-        },
-      ])
-    );
-  }, [systemInformation]);
-
-  return {
-    networkChartData,
-    currentDownloadSpeed: systemInformation?.CurrentNetDownBytesPerSecond || 0,
-    currentUploadSpeed: systemInformation?.CurrentNetUpBytesPerSecond || 0,
-  };
-}
+import { useNetwork } from "@/hooks";
 
 function formatNetSpeed(bytesPerSecond: number) {
   const speedKbps = bytesPerSecond / 1024;
