@@ -8,6 +8,5 @@ This is a live wallpaper app that uses React to create eazy to extend widgets. I
 
 This widget displays the current network status.
 
-<video>
-  <source src=".github/assets/network-widget.mp4" type="video/mp4">
-</video>
+https://github.com/user-attachments/assets/84c77cbd-2df1-4a02-9932-cce1a8344966
+
