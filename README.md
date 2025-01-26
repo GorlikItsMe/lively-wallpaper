@@ -10,3 +10,10 @@ This widget displays the current network status.
 
 https://github.com/user-attachments/assets/84c77cbd-2df1-4a02-9932-cce1a8344966
 
+## References
+
+- [Lively Wallpaper](https://github.com/rocksdanister/lively)
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Shadcn/ui](https://ui.shadcn.com/)
+- [Wallhaven](https://wallhaven.cc/)
