@@ -69,12 +69,15 @@
 
 html, body {
   overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 body {
   /* background-image: url('/wallpapers/wallhaven-exk2zr.png'); */
   /* background-size: cover; */
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
   height: 100%;
   background-color: black;
