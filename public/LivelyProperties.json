@@ -73,10 +73,5 @@
         "type": "checkbox",
         "value": true,
         "text": "Enable devtools"
-    },
-    "devtools-autoredirect": {
-        "type": "textbox",
-        "value": "http://localhost:5173",
-        "text": "Auto-Redirect URL (will redirect only if devtools are enabled and target is url return 200)"
     }
 }
