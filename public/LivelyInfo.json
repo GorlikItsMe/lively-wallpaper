@@ -1,0 +1,12 @@
+{
+  "AppVersion": "0.0.3",
+  "Title": "My wallpaper",
+  "Thumbnail": "wallpapers/wallhaven-exk2zr.png",
+  "Desc": "My personal wallpaper",
+  "Author": "GorlikItsMe",
+  "License": "MIT",
+  "Contact": "https://github.com/GorlikItsMe/lively-wallpaper",
+  "Type": 1,
+  "Arguments": "--system-information --pause-event true",
+  "FileName": "index.html"
+}
