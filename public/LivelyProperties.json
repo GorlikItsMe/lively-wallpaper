@@ -33,7 +33,7 @@
     },
     "network-widget-y": {
         "type": "textbox",
-        "value": "900",
+        "value": "892",
         "text": "Position Y (px)"
     },
     "network-widget-downColor": {
@@ -45,6 +45,25 @@
         "text": "Upload color",
         "type": "color",
         "value": "#4ac641"
+    },
+    "system-usage-widget-label": {
+        "type": "label",
+        "value": "[Widget] System Usage"
+    },
+    "system-usage-widget-enabled": {
+        "type": "checkbox",
+        "value": true,
+        "text": "Enabled"
+    },
+    "system-usage-widget-x": {
+        "type": "textbox",
+        "value": "1620",
+        "text": "Position X (px)"
+    },
+    "system-usage-widget-y": {
+        "type": "textbox",
+        "value": "837",
+        "text": "Position Y (px)"
     },
     "example-widget-label": {
         "type": "label",
@@ -71,7 +90,7 @@
     },
     "devtools-enabled": {
         "type": "checkbox",
-        "value": true,
+        "value": false,
         "text": "Enable devtools"
     }
 }

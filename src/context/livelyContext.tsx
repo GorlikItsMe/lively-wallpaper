@@ -11,7 +11,7 @@ export interface ILivelySystemInformation {
   NameGpu: string;
   NameNetCard: string;
   CurrentCpu: number;
-  CurrentGpu3d: number;
+  CurrentGpu3D: number;
   CurrentRamAvail: number;
   CurrentNetDown: number;
   CurrentNetUp: number;
