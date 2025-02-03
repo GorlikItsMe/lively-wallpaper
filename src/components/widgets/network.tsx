@@ -1,5 +1,5 @@
 import { Activity, ArrowUp, ArrowDown } from "lucide-react";
-import { Area, AreaChart, CartesianGrid } from "recharts";
+import { Area, AreaChart, CartesianGrid, YAxis } from "recharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   ChartContainer,
@@ -137,6 +137,8 @@ export default function NetworkWidget() {
                   fill="url(#uploadSpeedGradient)"
                   isAnimationActive={false}
                 />
+                {/* That thing is here to set minimum graph size */}
+                <YAxis domain={[0, 1024 * 1024]} hide />
                 <ChartTooltip
                   content={
                     <ChartTooltipContent
