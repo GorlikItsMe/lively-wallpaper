@@ -15,11 +15,11 @@ export interface ILivelySystemInformation {
   CurrentRamAvail: number;
   CurrentNetDown: number;
   CurrentNetUp: number;
+  TotalRam: number;
 
+  // my calculation to make my life easier
   CurrentNetDownBytesPerSecond: number;
   CurrentNetUpBytesPerSecond: number;
-
-  TotalRam: number;
 }
 
 export type ILivelyProperties = Record<string, string | boolean | number>;
