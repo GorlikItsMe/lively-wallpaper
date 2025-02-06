@@ -13,7 +13,7 @@ const useSystem = () => {
   const { systemInformation } = useLively();
 
   function formatProcent(val: number) {
-    const extraZero = val < 10 ? "0" : "";
+    const extraZero = val >= 10 ? "" : "0";
     return extraZero + val.toFixed(1) + "%";
   }
 
