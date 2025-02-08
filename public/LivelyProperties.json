@@ -17,6 +17,17 @@
         "filter": "*.jpg|*.jpeg|*.png",
         "folder": "wallpapers"
     },
+    "language": {
+        "type": "dropdown",
+        "value": 0,
+        "text": "Language",
+        "items": [
+            "en",
+            "pl",
+            "de",
+            "fr"
+        ]
+    },
     "network-widget-label": {
         "type": "label",
         "value": "[Widget] Network"
@@ -64,6 +75,35 @@
         "type": "textbox",
         "value": "837",
         "text": "Position Y (px)"
+    },
+    "weather-widget-label": {
+        "type": "label",
+        "value": "[Widget] Weather"
+    },
+    "weather-widget-enabled": {
+        "type": "checkbox",
+        "value": true,
+        "text": "Enabled"
+    },
+    "weather-widget-x": {
+        "type": "textbox",
+        "value": "1620",
+        "text": "Position X (px)"
+    },
+    "weather-widget-y": {
+        "type": "textbox",
+        "value": "0",
+        "text": "Position Y (px)"
+    },
+    "weather-widget-latitude": {
+        "type": "textbox",
+        "value": "54.3482907",
+        "text": "Latitude ° (use https://www.gps-coordinates.net/)"
+    },
+    "weather-widget-longitude": {
+        "type": "textbox",
+        "value": "18.6540233",
+        "text": "Longitude ° (use https://www.gps-coordinates.net/)"
     },
     "example-widget-label": {
         "type": "label",

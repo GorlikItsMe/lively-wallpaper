@@ -4,11 +4,15 @@ import NetworkWidget from "./components/widgets/network";
 import ExampleWidget from "./components/widgets/example";
 import SystemUsagekWidget from "./components/widgets/system-usage";
 import { livelyRandomGenerator } from "@/lib/utils";
+import WeatherWidget from "./components/widgets/weather";
+
+// @ts-ignore
+window.livelyRandomGenerator = livelyRandomGenerator;
 
 const isLivelyBrowser = location.protocol == "localfolder:";
 if (!isLivelyBrowser) {
   // We are in real browser. Start random data generator to show something on screan
-  livelyRandomGenerator();
+  console.log("run `livelyRandomGenerator()`");
 }
 
 function App() {
@@ -20,6 +24,7 @@ function App() {
       <ExampleWidget />
       <NetworkWidget />
       <SystemUsagekWidget />
+      <WeatherWidget />
 
       {enableDevtools && <DevTools />}
     </>

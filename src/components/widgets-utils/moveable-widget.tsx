@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useLively } from "@/hooks";
 import { CSSProperties } from "react";
+import { ErrorBoundary } from "react-error-boundary";
+import { Card } from "../ui/card";
 
 export interface MoveableWidgetProps {
   id: string;
@@ -34,7 +36,11 @@ export default function MoveableWidget({ id, children }: MoveableWidgetProps) {
   };
   return (
     <div id={id} style={style}>
-      {enabled && children}
+      {enabled && (
+        <ErrorBoundary fallback={<Card>⚠️Something went wrong</Card>}>
+          {children}
+        </ErrorBoundary>
+      )}
     </div>
   );
 }

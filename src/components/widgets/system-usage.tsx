@@ -64,7 +64,7 @@ function SystemProperty({
           <div
             className="bg-slate-600 absolute top-0 left-0 w-full h-full block -z-10 transition-all rounded-s"
             style={{
-              width: progress,
+              width: isNaN(progress) ? 0 : progress,
             }}
           />
           {iconComponent}
