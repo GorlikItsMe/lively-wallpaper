@@ -17,3 +17,4 @@ https://github.com/user-attachments/assets/84c77cbd-2df1-4a02-9932-cce1a8344966
 - [Vite](https://vitejs.dev/)
 - [Shadcn/ui](https://ui.shadcn.com/)
 - [Wallhaven](https://wallhaven.cc/)
+- [Meteocons](https://basmilius.github.io/weather-icons/)
