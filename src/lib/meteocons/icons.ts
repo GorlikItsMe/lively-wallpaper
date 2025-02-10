@@ -304,6 +304,10 @@ export type IconStyles = { [key in IconStyle]: string; };
 
 export type IconName = (typeof iconGroups)[number]['icons'][number][number]
 
-export function getMeteoconsUrl(iconName: IconName, style: IconStyle = "fill") {
+export function getMeteoconsRemoteUrl(iconName: IconName, style: IconStyle = "fill") {
     return `https://raw.githubusercontent.com/basmilius/weather-icons/refs/heads/dev/production/${style}/svg/${iconName}.svg`
+}
+
+export function getMeteoconsUrl(iconName: IconName, style: IconStyle = "fill") {
+    return `/meteocons/${style}/svg/${iconName}.svg`
 }
